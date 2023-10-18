@@ -1,150 +1,114 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    text-align: center;
-  }
-  
-  .page-title {
-    color: #001f3f;
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 60px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-  
-  .form-container {
-    width: 65%;
-    margin: 20px auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 15px;
-  }
-  
-  .input-group {
-    flex-basis: calc(45% - 10px); /* Ajuste conforme necessário */
-    margin-bottom: 10px; /* Ajuste a margem inferior para espaçamento entre os campos */
-  }
-  
-  .form-group label {
-    flex-basis: 100%;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #001f3f;
-    text-align: left;
-  }
-  
-  .form-group input,
-  .form-group select {
-    width: calc(100% - 20px); /* Ajuste a largura do input conforme necessário */
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #001f3f;
-    border-radius: 5px;
-  }
-  
-  #nomeCompleto {
-    flex-basis: calc(60% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #cpf {
-    flex-basis: calc(20% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #dataDeNascimento {
-    flex-basis: calc(60% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #nomeDaMae {
-    flex-basis: calc(60% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #enderecoRua {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #enderecoBairro {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #enderecoNumero {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #enderecoCidade {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #enderecoEstado {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #contatoDoResponsavel {
-    flex-basis: calc(50% - 10px); /* Ajuste conforme necessário */
-  }
-  
-  #serie {
-    margin-left: -470px;
-    height: 30px;
-    width: 70px;
-    font-size: 15px;
-    border: 1px solid #001f3f;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #fff;
-    color: #001f3f;
-    cursor: pointer;
-    appearance: none;
+  text-align: center;
+  margin: 20px;
+}
+
+.page-title {
+  color: #001f3f;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-container {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.input-group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 10px;
+}
+
+label {
+  flex-basis: 100%;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #001f3f;
+  text-align: left;
+}
+
+input,
+select {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #001f3f;
+  border-radius: 5px;
+}
+
+#serie {
+  height: 30px;
+  width: calc(100% - 20px);
+  font-size: 15px;
+  border: 1px solid #001f3f;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #fff;
+  color: #001f3f;
+  cursor: pointer;
 }
 
 #serie:hover {
-    background-color: #f0f8ff;
+  background-color: #f0f8ff;
 }
 
 #serie:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
 }
-  
-  button {
-    margin-top: -20px;
-    margin-left: 550px;
-    background-color: #001f3f;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #003366;
-  }
 
-  .back-button {
-    background-color: #001f3f;
-    color: #fff;
-    border: none;
-    padding: 10px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 0px;
-    margin-top: 15px;
+button {
+  margin-top: 10px;
+  background-color: #001f3f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+.back-button {
+  background-color: #001f3f;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .back-button:hover {
-    background-color: #003366;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #003366;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .back-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
 }

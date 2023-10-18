@@ -1,58 +1,66 @@
-.container {
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
     text-align: center;
-}
-
-.page-title {
+    margin: 20px; /* Adicionei margens para espaçamento */
+  }
+  
+  .page-title {
     color: #001f3f;
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 60px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
-
-.form-container {
-    width: 65%;
+  
+  .form-container {
+    width: 100%; /* Ocupa 100% da largura do contêiner pai */
     margin: 20px auto;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
+    padding: 10px; /* Adicionei um pouco de padding */
+  }
+  
+  .form-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 15px;
-}
-
-.input-group {
-    flex-basis: calc(45% - 10px);
+  }
+  
+  .input-group {
+    flex-basis: calc(50% - 10px); /* Ocupa 50% da largura com espaço entre os elementos */
     margin-bottom: 10px;
-}
-
-label {
+  }
+  
+  label {
     flex-basis: 100%;
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #001f3f;
     text-align: left;
-}
-
-input,
-select {
-    width: calc(100% - 20px);
+  }
+  
+  input,
+  select {
+    width: calc(100% - 20px); /* Ocupa 100% da largura com espaço entre os elementos */
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #001f3f;
     border-radius: 5px;
-}
-
-#serie {
+  }
+  
+  #serie {
     height: 30px;
-    width: 100%;
+    width: calc(100% - 20px); /* Ocupa 100% da largura com espaço entre os elementos */
     font-size: 15px;
     border: 1px solid #001f3f;
     border-radius: 5px;
@@ -60,49 +68,48 @@ select {
     background-color: #fff;
     color: #001f3f;
     cursor: pointer;
-}
-
-#serie:hover {
+  }
+  
+  #serie:hover {
     background-color: #f0f8ff;
-}
-
-#serie:focus {
+  }
+  
+  #serie:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
-}
-
-button {
-    margin-top: -20px;
-    margin-left: 550px;
+  }
+  
+  button {
+    margin-top: 10px; /* Ajuste para espaçamento do botão */
     background-color: #001f3f;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #003366;
-}
-
-.back-button {
+  }
+  
+  .back-button {
     background-color: #001f3f;
     color: #fff;
     border: none;
     padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 0px;
     margin-top: 15px;
-}
-
-.back-button:hover {
+  }
+  
+  .back-button:hover {
     background-color: #003366;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.back-button:focus {
+  }
+  
+  .back-button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
-}
+  }
+  
