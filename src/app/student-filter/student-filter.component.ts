@@ -10,8 +10,9 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class StudentFilterComponent implements OnInit {
   allStudents: Student[] = [];
-  filteredStudents: Student[] = [];
+  filteredStudents: any[] = [];
   selectedSerie: string = '1';
+  expandedStudentId: number | null = null;
 
   @Output() filterChanged: EventEmitter<Student[]> = new EventEmitter<Student[]>();
 
@@ -56,5 +57,13 @@ export class StudentFilterComponent implements OnInit {
 
   goToList() {
     this.router.navigate(['/students']);
+  }
+
+  toggleDetails(studentId: number): void {
+    if (this.expandedStudentId === studentId) {
+      this.expandedStudentId = null; // Oculta as informações detalhadas se já estiverem expandidas
+    } else {
+      this.expandedStudentId = studentId; // Exibe as informações detalhadas do aluno clicado
+    }
   }
 }

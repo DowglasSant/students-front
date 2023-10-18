@@ -11,7 +11,8 @@ import { Student } from '../student.model';
 export class StudentListComponent implements OnInit {
   students: any[] = [];
   selectedSerie: string = '1'; // Valor padrão
-
+  expandedStudentId: number | null = null;
+    
   constructor(private studentService: StudentService, private router: Router ) {}
 
   ngOnInit(): void {
@@ -59,5 +60,13 @@ export class StudentListComponent implements OnInit {
   goToRegister() {
     // Adicione a navegação para a rota de registro aqui
     this.router.navigate(['/students/new']);
+  }
+
+  toggleDetails(studentId: number): void {
+    if (this.expandedStudentId === studentId) {
+      this.expandedStudentId = null; // Oculta as informações detalhadas se já estiverem expandidas
+    } else {
+      this.expandedStudentId = studentId; // Exibe as informações detalhadas do aluno clicado
+    }
   }
 }

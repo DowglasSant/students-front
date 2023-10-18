@@ -1,13 +1,13 @@
-body {
+.body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
 }
 
 .container {
-  position: relative;
   text-align: center;
-  margin: 20px; /* Adicionei margens para espaçamento */
+  margin: 20px;
 }
 
 .page-title {
@@ -15,194 +15,161 @@ body {
   font-size: 30px;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 60px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  font-size: 36px;
+  margin-top: 40px; /* Afastado do topo */
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .filter {
   display: flex;
   align-items: center;
-  margin-left: 5%; /* Use porcentagem para tornar mais responsivo */
+}
+
+label {
+  margin-right: 10px;
 }
 
 .filter select {
-  margin-right: 10px;
-  height: 30px;
-  width: 70px;
-  font-size: 15px;
-  border: 1px solid #001f3f;
+  height: 34px; /* Ajusta a altura para ser igual ao botão Filtrar */
+  border: none;
   border-radius: 5px;
-  padding: 5px;
+  margin-right: 5px; /* Espaçamento entre o select e o botão Filtrar */
+  padding: 5px; /* Espaçamento interno */
   background-color: #fff;
   color: #001f3f;
-  cursor: pointer;
-  appearance: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.filter select:hover {
-  background-color: #f0f8ff;
-}
-
+.filter select:hover,
 .filter select:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
+  background-color: #f2f2f2;
 }
 
-.filter-button {
+.filter-button,
+.add-button {
   background-color: #001f3f;
   color: #fff;
   border: none;
-  padding: 8px 10px;
+  padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.add-button {
-  position: fixed;
-  bottom: 5%; /* Use porcentagem para tornar mais responsivo */
-  right: 5%; /* Use porcentagem para tornar mais responsivo */
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #001f3f;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 40px;
-  font-weight: bold;
+.filter-button:hover,
+.add-button:hover {
+  background-color: #003366;
 }
 
 .students-container {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 90%; /* Use porcentagem para tornar mais responsivo */
-  margin: 20px auto;
-  margin-bottom: 5%; /* Use porcentagem para tornar mais responsivo */
-}
-
-.titles {
-  background-color: #001f3f;
-  color: #fff;
-  display: flex;
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.titleNome {
-  flex: 1;
-  text-align: center;
-  margin-left: -2%; /* Use porcentagem para tornar mais responsivo */
-}
-
-.titleMatricula {
-  flex: 1;
-  text-align: center;
-  margin-left: -3%; /* Use porcentagem para tornar mais responsivo */
-}
-
-.titleIdade {
-  flex: 1;
-  text-align: center;
-  margin-left: -2.5%; /* Use porcentagem para tornar mais responsivo */
-}
-
-.titleSerie {
-  text-align: center;
-  margin-left: 5%; /* Use porcentagem para tornar mais responsivo */
-}
-
-.titleAcoes {
-  flex: 1;
-  text-align: center;
-  margin-right: -5%; /* Use porcentagem para tornar mais responsivo */
+  width: 100%;
 }
 
 .students-list {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-}
-
-.students-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.students-list li.even-row {
-  background-color: #f0f8ff;
-}
-
-.students-list li.odd-row {
-  background-color: #fff;
+  margin: 0;
 }
 
 .student-info {
-  flex: 1;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.student-info:hover {
+  background-color: #f2f2f2;
+}
+
+.details {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.expanded-info {
+  display: flex;
+  flex-wrap: wrap; /* Ajuste para que os detalhes possam quebrar para a próxima linha se não houver espaço suficiente */
+  justify-content: space-around; /* Distribuir os detalhes igualmente */
+  width: 100%;
+  margin-top: 10px;
+}
+
+.title {
+  font-weight: bold;
+  flex-basis: 100%; /* Ocupar 100% da largura */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.nome {
+  font-size: 14px; /* Diminui a fonte do nome */
 }
 
 .info {
-  flex: 1;
+  font-size: 14px; /* Diminui a fonte dos dados */
+  flex-basis: 48%; /* Ocupar quase metade da largura para dois detalhes por linha */
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.info-nome {
+  font-size: 18px; /* Aumenta a fonte do nome */
 }
 
 .action-buttons {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: center; /* Centraliza os botões */
+  margin-top: 10px; /* Espaçamento entre detalhes e botões */
 }
 
-.action-button {
-  background-color: #001f3f;
-  color: #fff;
+.edit-button,
+.delete-button {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
   border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-right: 10px; /* Espaçamento entre os botões */
 }
 
-.filter-button:hover,
-.add-button:hover,
-.action-button:hover {
-  background-color: #003366;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.edit-button {
+  background-image: url('/assets/pencil.png');
 }
 
-.filter-button:focus,
-.add-button:focus,
-.action-button:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
+.delete-button {
+  background-image: url('/assets/trash.png');
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: scale(1.1);
 }
 
 .back-button {
   background-color: #001f3f;
   color: #fff;
   border: none;
-  padding: 10px 10px;
+  padding: 15px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 90%; /* Use porcentagem para tornar mais responsivo */
-  margin-top: 2%; /* Use porcentagem para tornar mais responsivo */
+  margin-top: 15px;
+  display: block; /* Faz com que o botão seja exibido como bloco para ocupar a largura total disponível */
+  margin-left: auto; /* Coloca o botão no lado direito da tela */
+  margin-right: auto; /* Coloca o botão no lado esquerdo da tela */
 }
 
 .back-button:hover {
@@ -214,3 +181,4 @@ body {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 31, 63, 0.5);
 }
+
