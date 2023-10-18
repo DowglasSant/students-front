@@ -1,0 +1,82 @@
+<div class="container">
+    <h1 class="page-title">Registro de Estudante</h1>
+  
+    <div class="form-container">
+      <form (submit)="registerStudent()">
+        <div class="form-group">
+          <div class="input-group">
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input id="nomeCompleto" name="nomeCompleto" type="text" [(ngModel)]="newStudent.nomeCompleto" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="cpf">CPF:</label>
+            <input id="cpf" name="cpf" type="text" [(ngModel)]="newStudent.cpf" required (input)="formatCpf($event)">
+          </div>
+  
+          <div class="input-group">
+            <label for="dataDeNascimento">Data de Nascimento:</label>
+            <input id="dataDeNascimento" name="dataDeNascimento" type="text" [(ngModel)]="newStudent.dataDeNascimento" required (input)="formatDate($event)">
+          </div>
+  
+          <div class="input-group">
+            <label for="nomeDaMae">Nome da Mãe:</label>
+            <input id="nomeDaMae" name="nomeDaMae" type="text" [(ngModel)]="newStudent.nomeDaMae" required>
+          </div>
+
+          <div class="input-group">
+            <label for="enderecoRua">Rua:</label>
+            <input id="enderecoRua" name="enderecoRua" type="text" [(ngModel)]="newStudent.enderecoRua" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="enderecoBairro">Bairro:</label>
+            <input id="enderecoBairro" name="enderecoBairro" type="text" [(ngModel)]="newStudent.enderecoBairro" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="enderecoNumero">Número:</label>
+            <input id="enderecoNumero" name="enderecoNumero" type="text" [(ngModel)]="newStudent.enderecoNumero" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="enderecoCidade">Cidade:</label>
+            <input id="enderecoCidade" name="enderecoCidade" type="text" [(ngModel)]="newStudent.enderecoCidade" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="enderecoEstado">Estado:</label>
+            <input id="enderecoEstado" name="enderecoEstado" type="text" [(ngModel)]="newStudent.enderecoEstado" required>
+          </div>
+  
+          <div class="input-group">
+            <label for="contatoDoResponsavel">Contato do Responsável:</label>
+            <input id="contatoDoResponsavel" name="contatoDoResponsavel" type="text" [(ngModel)]="newStudent.contatoDoResponsavel" required (input)="formatPhoneNumber($event)">
+          </div>
+  
+          <div class="input-group">
+            <label for="serie">Série:</label>
+            <select id="serie" name="serie" [(ngModel)]="newStudent.serie" required>
+              <option value="1">1º Ano</option>
+              <option value="2">2º Ano</option>
+              <option value="3">3º Ano</option>
+              <option value="4">4º Ano</option>
+              <option value="5">5º Ano</option>
+              <option value="6">6º Ano</option>
+              <option value="7">7º Ano</option>
+              <option value="8">8º Ano</option>
+              <option value="9">9º Ano</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit">Registrar</button>
+        </div>
+      </form>
+    </div>
+
+    <div>
+        <button class="back-button" (click)="goToList()">Voltar</button>
+    </div>
+    
+  </div>

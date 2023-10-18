@@ -1,0 +1,54 @@
+<div class="container">
+    <h1 class="page-title">Lista de Estudantes Filtrados</h1>
+
+    <div class="header">
+        <div class="filter">
+            <label>
+                <select [(ngModel)]="selectedSerie">
+                    <option value="1">1º Ano</option>
+                    <option value="2">2º Ano</option>
+                    <option value="3">3º Ano</option>
+                    <option value="4">4º Ano</option>
+                    <option value="5">5º Ano</option>
+                    <option value="6">6º Ano</option>
+                    <option value="7">7º Ano</option>
+                    <option value="8">8º Ano</option>
+                    <option value="9">9º Ano</option>
+                </select>
+                <button class="filter-button" (click)="filterStudents(selectedSerie)">Filtrar</button>
+            </label>
+        </div>
+    </div>
+
+    <div class="students-container">
+        <div class="titles">
+            <span class="titleNome">Nome</span>
+            <span class="titleMatricula">Matrícula</span>
+            <span class="titleIdade">Idade</span>
+            <span class="titleSerie">Série</span>
+            <span class="titleAcoes">Ações</span>
+        </div>
+
+        <ul class="students-list">
+            <li *ngFor="let student of filteredStudents; let even = even" [ngClass]="{ 'even-row': even, 'odd-row': !even }">
+                <div class="student-info">
+                    <span class="info">{{ student.nomeCompleto }}</span>
+                    <span class="info">{{ student.matricula }}</span>
+                    <span class="info">{{ student.idade }} anos</span>
+                    <span class="info">{{ student.serie }}</span>
+                    <div class="action-buttons">
+                        <button class="action-button" (click)="editStudent(student.id)">Editar</button>
+                        <button class="action-button" (click)="deleteStudent(student.id)">Deletar</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button class="back-button" (click)="goToList()">Voltar</button>
+
+
+
+
+
