@@ -74,6 +74,7 @@ button {
   transition: background-color 0.3s ease;
   margin: 0 auto; /* Adicionado para centralizar horizontalmente */
   display: block; /* Para ocupar a largura total disponível */
+  font-weight: bold;
 }
 
 button:hover {
@@ -88,6 +89,7 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
+  font-weight: bold;
 }
 
 .back-button:hover {

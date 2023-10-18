@@ -11,7 +11,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class StudentFilterComponent implements OnInit {
   allStudents: Student[] = [];
   filteredStudents: any[] = [];
-  selectedSerie: string = '1';
+  selectedSerie: string = '1º Ano';
   expandedStudentId: number | null = null;
 
   @Output() filterChanged: EventEmitter<Student[]> = new EventEmitter<Student[]>();

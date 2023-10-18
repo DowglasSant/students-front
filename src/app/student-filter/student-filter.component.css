@@ -61,6 +61,7 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: bold;
 }
 
 .filter-button:hover,
@@ -115,7 +116,8 @@ label {
 }
 
 .nome {
-  font-size: 14px; /* Diminui a fonte do nome */
+  font-size: 14px;
+  color: #001f3f; /* Diminui a fonte do nome */
 }
 
 .info {
@@ -123,10 +125,13 @@ label {
   flex-basis: 48%; /* Ocupar quase metade da largura para dois detalhes por linha */
   text-align: center;
   margin-bottom: 10px;
+  color: #001f3f;
 }
 
 .info-nome {
-  font-size: 18px; /* Aumenta a fonte do nome */
+  font-size: 18px;
+  font-weight: bold;
+  color: #001f3f; /* Aumenta a fonte do nome */
 }
 
 .action-buttons {
@@ -170,6 +175,7 @@ label {
   display: block; /* Faz com que o botão seja exibido como bloco para ocupar a largura total disponível */
   margin-left: auto; /* Coloca o botão no lado direito da tela */
   margin-right: auto; /* Coloca o botão no lado esquerdo da tela */
+  font-weight: bold;
 }
 
 .back-button:hover {
